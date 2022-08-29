@@ -1,0 +1,136 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+}
+  
+ul {
+    margin: 0;
+}
+  
+.bg-light-green {
+    background-color: #b5e8da;
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #b5e8da;
+    background-color: #000;
+    text-align: center;
+}
+
+.nav-link:first-child {
+    min-width: 70px;
+    border-radius: 20px 0 0 20px;
+}
+
+.nav-link:last-child {
+    border-radius: 0 20px 20px 0;
+}
+  
+.site-header .navbar-nav .nav-link:hover {
+    color: #b5e8da;
+    font-weight: 600;
+    border: #b5e8da solid 1px;
+    margin: -1px 0;
+    
+}
+  
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 700;
+}
+  
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+  
+.article-title {
+    color: #444444;
+}
+  
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+  
+.article-content {
+    white-space: pre-line;
+}
+  
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+  
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+  
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+  
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+  
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.bg-dark-blue {
+    background-color: #6785a0;
+}
+
+.content-section + a { 
+    padding-bottom: 20xp;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer p {
+    color: #696969;
+    column-count: 2;
+    column-gap: 50px;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.product-section {
+    border-bottom: #000 1px solid;
+    border-top: #000 1px solid;
+}

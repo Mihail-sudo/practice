@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for product in products.items %}
+            <div class="content-section col-md-4">
+                <img class="rounded-circle account-img" src="static/img/package.png" alt="">
+                <div class="product-section">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.subscribe }}</p>
+                </div>
+                <button class="btn btn-outline-info mt-3">buy</button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {% for product in products %}
+    <div class="content-section">
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.subscribe }}</p>
+    </div>
+    {% endfor %}
+{% endblock content %}

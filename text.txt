@@ -1,0 +1,7 @@
+user - first/second name, age, gender, img, basket
+basket - products, total cost
+product - cost, describe, img, rate // comments?
+
+
+user -> basket just link/id of basket
+basket of products
