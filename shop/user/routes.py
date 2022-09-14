@@ -72,7 +72,8 @@ def account():
 @user.route("/basket")
 @login_required
 def basket():
-    products = Product.query.all()
+    products = Product.query.filter(Product.clients.any(id=current_user.id)).all()
+    print(products)
     return render_template('basket.html', products=products)
 
 

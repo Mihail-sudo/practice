@@ -10,20 +10,13 @@ from flask_login import UserMixin
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
-
-# class Basket(db.Model):
-#     __tablename__ = 'basket'
-#     client_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False, primary_key=True)
-#     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False, primary_key=True)
-#     count = db.Column(db.Integer, nullable=False, default=1)
     
 
 basket = db.Table(
     'basket',
-    db.Column('client_id', db.ForeignKey('user.id'), primary_key=True),
-    db.Column('product_id', db.ForeignKey('product.id'), primary_key=True),
-    db.Column('count', db.Integer, nullable=False, default=1),
+    db.Column('id', db.Integer, primary_key=True),
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('product_id', db.Integer, db.ForeignKey('product.id')),
 )
 
 
@@ -62,3 +55,6 @@ class Product(db.Model):
     clients = db.relationship('User', secondary=basket, backref="products")
     
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    
+    def __repr__(self) -> str:
+        return f'Product {self.name}, {self.subscribe}, {self.clients}'
